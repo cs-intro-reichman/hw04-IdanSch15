@@ -20,7 +20,6 @@ public class MyString {
     public static String lowerCase(String str) {
 
         String lowerStr = "";
-        if (str == "") return str;
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
                 lowerStr += (char)(str.charAt(i) + 32);
@@ -35,10 +34,10 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         
-        if (str1 == "" || str2 == "") return false;
-        
-        str1 = lowerCase(str1);
-        str2 = lowerCase(str2);
+        if (str1 == "" && str2 == "" || str2 == "") return true;
+
+        else if (str1 == "") return false;
+
         int start = 0;
 
         for (int i = 0; str1.length() - i >= str2.length(); i++) {
