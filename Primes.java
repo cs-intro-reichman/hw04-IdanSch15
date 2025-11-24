@@ -35,7 +35,7 @@ public class Primes {
             
         }
             
-            System.out.println("Prime numbers up to " + n);
+            System.out.println("Prime numbers up to " + n + ":");
 
             int count = 0;
 

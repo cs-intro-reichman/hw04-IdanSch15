@@ -20,6 +20,7 @@ public class MyString {
     public static String lowerCase(String str) {
 
         String lowerStr = "";
+        if (str == "") return str;
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
                 lowerStr += (char)(str.charAt(i) + 32);
